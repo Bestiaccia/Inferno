@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Covid Inferno</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://kit.fontawesome.com/94daf75002.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #262626;">
+
+	<main class="container-fluid text-white">
+		<div class="row justify-content-center">
+			<div class="col-auto my-2">
+				<h1 id="mainTitle">Inferno Pandemico</h1>
+			</div>
+		</div>
+		<br>
+		<div class="row justify-content-center mb-1">
+			<div class="col-auto">
+				<p id="instructions">Clicca sui gironi per saperne di più:</p>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<img src="img/mainImage.jpg" usemap="#image-map" id="mainImage">
+			<map name="image-map">
+			    <area target="" alt="1" title="1" coords="662,53,18" shape="circle" data-toggle="modal" data-target="#modal1" onclick="addSrc(1, 'https://odysee.com/$/embed/@CovidMemories:a/Video001--Gravitas-Wuhan-Coronavirus-Six-videos-that-triggered-a-panic:3?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="2" title="2" coords="30,70,19" shape="circle" data-toggle="modal" data-target="#modal2" onclick="addSrc(2, 'https://odysee.com/$/embed/@CovidMemories:a/Video002---Coronavirus-come-nasce-il-focolaio---Indovina-chi-viene-a-cena-29032020-:f?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="3" title="3" coords="244,183,18" shape="circle" data-toggle="modal" data-target="#modal3" onclick="addSrc(3, 'https://odysee.com/$/embed/@CovidMemories:a/Video003--Dichiarazione-stato-di-emergenza-Italia:7?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="4" title="4" coords="500,227,17" shape="circle" data-toggle="modal" data-target="#modal4" onclick="addSrc(4, 'https://odysee.com/$/embed/@CovidMemories:a/Video004-Piano-pandemico-non-aggiornato:c?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="5" title="5" coords="299,243,17" shape="circle" data-toggle="modal" data-target="#modal5" onclick="addSrc(5, 'https://odysee.com/$/embed/@CovidMemories:a/Video005-Abbraccia-un-cinese-febbraio-2020:d?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="6" title="6" coords="477,268,18" shape="circle" data-toggle="modal" data-target="#modal6" onclick="addSrc(6, 'https://odysee.com/$/embed/@CovidMemories:a/Video006-Aperitivo-contro-la-paura-Marzo-2020:1?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="7" title="7" coords="281,288,17" shape="circle" data-toggle="modal" data-target="#modal7" onclick="addSrc(7, 'https://odysee.com/$/embed/@CovidMemories:a/Video007-Il-vero-Virus-è-il-razzismo:b?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="8" title="8" coords="498,316,17" shape="circle" data-toggle="modal" data-target="#modal8" onclick="addSrc(8, 'https://odysee.com/$/embed/@CovidMemories:a/Video008-In-Italia-il-contagio-e-impossibile-:1?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="9" title="9" coords="250,358,17" shape="circle" data-toggle="modal" data-target="#modal9" onclick="addSrc(9, 'https://odysee.com/$/embed/@CovidMemories:a/Video009-Mura-citta-di-Codogno:6?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="10" title="10" coords="492,384,17" shape="circle" data-toggle="modal" data-target="#modal10" onclick="addSrc(10, 'https://odysee.com/$/embed/@CovidMemories:a/March_2020_Italy_lockdown:6?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="11" title="11" coords="278,399,17" shape="circle" data-toggle="modal" data-target="#modal11" onclick="addSrc(11, 'https://odysee.com/$/embed/@CovidMemories:a/Video011-Marcia-tachipirina-e-vigile-attesa-Giugno-2022:6?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="12" title="12" coords="488,425,17" shape="circle" data-toggle="modal" data-target="#modal12" onclick="addSrc(12, 'https://odysee.com/$/embed/@CovidMemories:a/Tagli-alla-sanita_marzo_2020:c?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="13" title="13" coords="275,445,18" shape="circle" data-toggle="modal" data-target="#modal13" onclick="addSrc(13, 'https://odysee.com/$/embed/@CovidMemories:a/Gualtieri-Nessuno-perdera-il-lavoro-per-il-coronavirus:c?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="14" title="14" coords="449,472,17" shape="circle" data-toggle="modal" data-target="#modal14" onclick="addSrc(14, 'https://odysee.com/$/embed/@CovidMemories:a/Andra-tutto-bene_2020:d?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="15" title="15" coords="242,518,17" shape="circle" data-toggle="modal" data-target="#modal15" onclick="addSrc(15, 'https://odysee.com/$/embed/@CovidMemories:a/Video014-Firma-il-modulo-di-rinuncia-a-cure:3?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="16" title="16" coords="500,540,17" shape="circle" data-toggle="modal" data-target="#modal16" onclick="addSrc(16, 'https://odysee.com/$/embed/@CovidMemories:a/Video016-Montagnier-vecchio-rincoglionito:b?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="17" title="17" coords="277,554,16" shape="circle" data-toggle="modal" data-target="#modal17" onclick="addSrc(17, 'https://odysee.com/$/embed/@CovidMemories:a/Video017-Il-vaccino-e-come-il-casco:4?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="18" title="18" coords="489,581,17" shape="circle" data-toggle="modal" data-target="#modal18" onclick="addSrc(18, 'https://odysee.com/$/embed/@CovidMemories:a/Video017-Il-green-pass-è-come-la-patente:0?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="19" title="19" coords="286,597,15" shape="circle" data-toggle="modal" data-target="#modal19" onclick="addSrc(19, 'https://odysee.com/$/embed/@CovidMemories:a/Video018-Io-sono-NO-SEMAFORO:b?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="20" title="20" coords="447,616,17" shape="circle" data-toggle="modal" data-target="#modal20" onclick="addSrc(20, 'https://odysee.com/$/embed/@CovidMemories:a/Video019-Muori-o-fai-morire:2?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="21" title="21" coords="316,634,17" shape="circle" data-toggle="modal" data-target="#modal21" onclick="addSrc(21, 'https://odysee.com/$/embed/@CovidMemories:a/Video020-Funzionicchia:7?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="22" title="22" coords="456,663,17" shape="circle" data-toggle="modal" data-target="#modal22" onclick="addSrc(22, 'https://odysee.com/$/embed/@CovidMemories:a/Video020-Nessuna-correlazione:0?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="23" title="23" coords="281,686,17" shape="circle" data-toggle="modal" data-target="#modal23" onclick="addSrc(23, 'https://odysee.com/$/embed/@CovidMemories:a/Video022-Caccia-al-non-vaccinato:c?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="24" title="24" coords="474,715,17" shape="circle" data-toggle="modal" data-target="#modal24" onclick="addSrc(24, 'https://odysee.com/$/embed/@CovidMemories:a/Video023-Tour-nelle-terapie-intensive:6?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="25" title="25" coords="477,787,13" shape="circle" data-toggle="modal" data-target="#modal25" onclick="addSrc(25, 'https://odysee.com/$/embed/@CovidMemories:a/Video024-Professionisti-dell-informazione:a?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="26" title="26" coords="295,799,13" shape="circle" data-toggle="modal" data-target="#modal26" onclick="addSrc(26, 'https://odysee.com/$/embed/@CovidMemories:a/Video025-Virologi-da-salotto-TV:6?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="27" title="27" coords="434,814,14" shape="circle" data-toggle="modal" data-target="#modal27" onclick="addSrc(27, 'https://odysee.com/$/embed/@CovidMemories:a/Euroinomani-Diego-Fusaro-2021:0?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="28" title="28" coords="304,842,13" shape="circle" data-toggle="modal" data-target="#modal28" onclick="addSrc(28, 'https://odysee.com/$/embed/@CovidMemories:a/Video027-Finti-rivoluzionari:8?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			    <area target="" alt="29" title="29" coords="372,914,17" shape="circle" data-toggle="modal" data-target="#modal29" onclick="addSrc(29, 'https://odysee.com/$/embed/@CovidMemories:a/Great-Reset:82?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo')">
+			</map>
+		</div>
+		<br><br><br>
+		<div class="row justify-content-center">
+			<div class="col-auto">
+				<h2>Video Bonus:</h2>
+			</div>
+		</div>
+		<br>
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-6 col-xl-4 my-2">
+				<iframe id="odysee-iframe" src="https://odysee.com/$/embed/@CovidMemories:a/Banchi-a-rotelle:0?r=FvNBW62z7uVya5W5Ff53NE3iVvkqEzWU" allowfullscreen></iframe>
+			</div>
+			<div class="col-12 col-md-6 col-xl-4 my-2">
+				<iframe src="https://www.youtube.com/embed/UhhH8gWP-UE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+			<div class="col-12 col-md-6 col-xl-4 my-2">
+				<iframe id="odysee-iframe" src="https://odysee.com/$/embed/@GlobalResistance:9/2020-2022-Covid-19-mandates-:4?r=5gYc4Qaiotekd1DtdfudXAoGdR9twdAo" allowfullscreen></iframe>
+			</div>
+		</div>
+<br><br><br>
+
+</div>
+<br><b
+		<div class="row justify-content-center">
+  <div class="col-auto p-3 mx-4 mt-4 mb-5 customButtonLink" style="position: relative; text-align: center;">
+    <a href="https://www.redbubble.com/shop/ap/153625574?asc=u">
+      <img class="img-fluid" src="img/tshirt.jpg" style="width: 500px;">
+      <p style="position: absolute; top: -90px; left: 50%; transform: translateX(-50%); color: white; font-weight: bold; font-size: 24px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">Magliette, adesivi<br>e altro!</p>
+    </a>
+  </div>
+</div>
+
+</main>
+
+
+
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Wuhan</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Selva del pipistrello oscuro</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Dichiarazione stato di emergenza</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Piano pandemico non aggiornato</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Abbraccia un cinese</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Aperitivo contro la paura</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Il vero virus è il razzismo</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">In Italia il contagio è impossibile</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Mura città di Codogno</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Solo due settimane di lockdown</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Tachipirina e vigile attesa</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">I tagli alla sanità non esistono</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Nessuno perderà il lavoro</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Andrà tutto bene</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Firma il modulo di rinuncia alle cure</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Montagnier vecchio rincoglionito</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Il vaccino è come il casco</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal18" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Il green pass è come la patente</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Io sono “no semaforo”</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Muori o fai morire</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Funzionicchia</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Nessuna correlazione</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal23" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Caccia al non vaccinato</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal24" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Tour nelle terapie intensive</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal25" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Professionisti dell’informazione</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal26" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Virologi da salotto TV</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal27" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Euroinomani</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal28" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">Finti rivoluzionari</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<div class="modal fade" id="modal29" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    		<div class="modal-content p-0" style="border: none; border-radius: 0;">
+    			<div class="container-fluid">
+	    			<div class="row shadow-sm pt-3 pb-3" style="border-bottom: 3px solid indianred;">
+	    				<div class="col-12">
+	    					<h2 class="modalTitle m-0">The Great Reset</h2>
+	    				</div>
+					</div>
+					<div class="row shadow-sm pt-4" style="background-color: #f2f2f2;">
+	    				<div class="col-12 my-2">
+	    					<iframe class="modalVideo" id="odysee-iframe" src="" allowfullscreen></iframe>
+	    				</div>
+					</div>
+	      			<div class="row justify-content-end p-3" style="border: none; background-color: #f2f2f2;">
+	        			<div class="pt-2 pb-2 pl-3 pr-3 shadow-sm greyButton text-white" data-dismiss="modal">
+							Chiudi
+						</div>
+	      			</div>
+	      		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.rwdImageMaps.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	   <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4783744,4,401,118,80,00011110']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4783744&101" alt="best tracker" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+</body>
+</html>
