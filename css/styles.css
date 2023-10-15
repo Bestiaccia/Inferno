@@ -1,1 +1,66 @@
+#mainTitle {
+	font-family: 'creepster', sans-serif;
+	font-size: 60px;
+}
 
+.buttonLink {
+	background-color: indianred;
+}
+
+.buttonLink:hover {
+	cursor: pointer;
+}
+
+#qrcode {
+	max-height: 60vh;
+}
+
+#instructions {
+	font-size: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+
+	#instructions {
+		font-size: 25px;
+	}
+
+}
+
+#mainImage {
+	width: auto;
+	max-width: 100%;
+}
+
+area:hover {
+	cursor: pointer;
+}
+
+iframe {
+	aspect-ratio: 16 / 9;
+	width: 100%;
+}
+
+.greyButton {
+	background-color: #737373;
+}
+
+.greyButton:hover {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+
+	#mainTitle {
+		font-size: 40px;
+	}
+
+	.modalTitle {
+		font-size: 20px;
+	}
+
+	.greyButton {
+		font-size: 12px;
+	}
+
+}
